@@ -2,7 +2,6 @@ const { bwt } = require('../modules/jwt.module')
 const { student } = require('../services/sql.service')
 
 const useAuth = async (req, res, next) => {
-    console.log(req.is('application/json'))
     if (!req.is('application/json'))
         return res.status(400).json({
             code: 400,
