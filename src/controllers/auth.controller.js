@@ -8,7 +8,7 @@ const fs = require('fs')
 const SQLMap = 'st_id, st_no, st_prefix, st_name, st_lastname, st_sex, st_birthdate, class_id, st_room, st_address, province_id, amphur_id, district_id, st_post, st_mail, st_mobile, father_name, father_lastname, father_card, father_edu, father_career, father_salary, father_work, father_mobile, mother_name, mother_lastname, mother_card, mother_edu, mother_career, mother_salary, mother_work, mother_mobile, parent_name, parent_lastname, parent_card, parent_edu, parent_career, parent_salary, parent_work, parent_mobile, st_password, st_graduation, st_graduation_year, st_graduation_date, st_register, st_update, st_card, st_nation, st_origin, st_religion, st_blood, st_pic, st_enname, st_enlastname, home_id, st_address_now, province_id_now, amphur_id_now, district_id_now, st_post_now, travel_id, travel_time, travel_length, health_id, st_weight, st_high, school_name, school_province, school_amphur, family_id, older_brather, young_brather, older_sister, young_sister, my_self, st_money, father_blood, mother_blood, parent_blood, parent_relation, st_latitude, st_longitude, birth_province'.replace(/\s/g, "").split(',')
 
 const loginValidator = yup.object().shape({
-    user: yup.number().required().min(10000).max(99999),
+    user: yup.number().required().min(10000).max(9999999),
     password: yup.string().required()
 })
 
